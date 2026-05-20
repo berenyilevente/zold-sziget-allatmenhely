@@ -27,7 +27,7 @@ export function Navbar() {
           <Link
             href="#top"
             aria-label="Zöld Sziget Állatmenhely — főoldal"
-            className="flex shrink-0 items-center gap-3"
+            className="flex shrink-0 items-center gap-2"
             onClick={() => setOpen(false)}
           >
             <Image
@@ -39,7 +39,8 @@ export function Navbar() {
               unoptimized
               className="h-10 w-auto sm:h-18"
             />
-            <span className="sr-only">Zöld Sziget Állatmenhely</span>
+
+            <p className="font-bold">Zöld Sziget Állatmenhely</p>
           </Link>
 
           <ul className="hidden items-center gap-8 md:flex">
