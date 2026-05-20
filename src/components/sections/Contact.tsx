@@ -1,5 +1,15 @@
 import { Container } from '../Container';
 
+const openingHours: ReadonlyArray<readonly [string, string]> = [
+  ['Hétfő', '12:00–16:00'],
+  ['Kedd', '12:00–16:00'],
+  ['Szerda', '12:00–16:00'],
+  ['Csütörtök', '12:00–16:00'],
+  ['Péntek', '12:00–16:00'],
+  ['Szombat', '12:00–16:00'],
+  ['Vasárnap', 'Zárva'],
+];
+
 export function Contact() {
   return (
     <section
@@ -126,11 +136,26 @@ export function Contact() {
                     Nyitvatartás
                   </dt>
                   <dd className="mt-1 text-base text-ink">
-                    Minden nap, kivéve vasárnap · 12:00 – 16:00
-                    <br />
-                    <span className="text-ink-soft">
+                    <ul className="space-y-1">
+                      {openingHours.map(([day, hours]) => (
+                        <li
+                          key={day}
+                          className="flex items-baseline justify-between gap-4 tabular-nums"
+                        >
+                          <span>{day}</span>
+                          <span
+                            className={
+                              hours === 'Zárva' ? 'text-ink-soft' : ''
+                            }
+                          >
+                            {hours}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-3 text-sm text-ink-soft">
                       Más időpontban telefonos egyeztetéssel.
-                    </span>
+                    </p>
                   </dd>
                 </div>
               </div>
