@@ -1,9 +1,11 @@
-import Link from "next/link";
-import { Container } from "../Container";
+import { Container } from '../Container';
 
 export function Orokbefogadas() {
   return (
-    <section id="orokbefogadas" className="scroll-mt-20 bg-cream py-20 sm:scroll-mt-24 sm:py-28">
+    <section
+      id="orokbefogadas"
+      className="scroll-mt-20 bg-cream py-20 sm:scroll-mt-24 sm:py-28"
+    >
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
@@ -33,12 +35,12 @@ export function Orokbefogadas() {
                 <span aria-hidden="true">📞</span>
                 Hívj minket
               </a>
-              <Link
+              <a
                 href="#kapcsolat"
                 className="inline-flex h-12 w-full items-center justify-center rounded-full border-2 border-brand bg-white px-7 text-base font-semibold text-brand-dark transition-colors hover:bg-brand hover:text-white sm:w-auto"
               >
                 Útvonal és cím
-              </Link>
+              </a>
             </div>
           </div>
 

@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Container } from './Container';
 
 type NavLink = { href: string; label: string };
@@ -24,7 +23,7 @@ export function Navbar() {
     >
       <Container>
         <div className="flex h-16 items-center justify-between gap-4 sm:h-20">
-          <Link
+          <a
             href="#top"
             aria-label="Zöld Sziget Állatmenhely — főoldal"
             className="flex shrink-0 items-center gap-2"
@@ -41,7 +40,7 @@ export function Navbar() {
             />
 
             <p className="font-bold">Zöld Sziget Állatmenhely</p>
-          </Link>
+          </a>
 
           <ul className="hidden items-center gap-8 md:flex">
             {links.map((l) => (

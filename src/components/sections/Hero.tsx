@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { Container } from '../Container';
 
@@ -39,18 +38,18 @@ export function Hero() {
               ment.
             </p>
             <div className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center lg:justify-start">
-              <Link
+              <a
                 href="#orokbefogadas"
                 className="inline-flex h-12 w-full items-center justify-center rounded-full bg-accent px-7 text-base font-semibold text-white shadow-sm transition-all hover:bg-accent-dark hover:shadow-md sm:w-auto"
               >
                 Örökbefogadás
-              </Link>
-              <Link
+              </a>
+              <a
                 href="#tamogatas"
                 className="inline-flex h-12 w-full items-center justify-center rounded-full border-2 border-brand bg-white/60 px-7 text-base font-semibold text-brand-dark transition-colors hover:bg-brand hover:text-white sm:w-auto"
               >
-                Támogatom őket
-              </Link>
+                Támogatás
+              </a>
             </div>
           </div>
 
