@@ -3,7 +3,8 @@
     "allow": [
       "Bash(ls -la /Users/berenyilevente/Documents/work/freelance/apps/ 2>/dev/null | head -20)",
       "Read(//Users/berenyilevente/Documents/work/freelance/apps/**)",
-      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm --turbopack --yes)"
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm --turbopack --yes)",
+      "Bash(npm run *)"
     ]
   }
 }
