@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# allatmenhely
 
-## Getting Started
+A landing-page starter template. Clone or branch per landing page, swap copy, tweak the theme, ship.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router, Turbopack, React 19)
+- TypeScript (strict)
+- Tailwind CSS v4 (config-less, theme tokens in `src/app/globals.css`)
+- ESLint 9 (flat config)
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` — dev server with Turbopack
+- `npm run build` — production build
+- `npm run start` — serve the production build
+- `npm run lint` — run ESLint
 
-## Learn More
+## Project layout
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/page.tsx` — composes the landing page by stacking section components
+- `src/app/layout.tsx` — root layout, fonts, metadata
+- `src/app/globals.css` — Tailwind v4 theme tokens and CSS variables
+- `src/components/Container.tsx` — shared max-width wrapper used by every section
+- `src/components/sections/` — one file per section (`Hero`, `Features`, `CTA`, `Footer`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To add a section, create `src/components/sections/<Name>.tsx`, wrap its content in `<Container>`, and import it into `page.tsx`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Styling
 
-## Deploy on Vercel
+Theme tokens and CSS variables live in `src/app/globals.css` under `@theme` blocks — there is no `tailwind.config.js`. Dark mode follows `prefers-color-scheme`; use `dark:` variants for component-level overrides. For brand colors, add a CSS variable rather than hard-coding hex values.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Path alias
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`@/*` maps to `src/*` (see `tsconfig.json`).
