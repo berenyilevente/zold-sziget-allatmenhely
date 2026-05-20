@@ -144,9 +144,7 @@ export function Contact() {
                         >
                           <span>{day}</span>
                           <span
-                            className={
-                              hours === 'Zárva' ? 'text-ink-soft' : ''
-                            }
+                            className={hours === 'Zárva' ? 'text-ink-soft' : ''}
                           >
                             {hours}
                           </span>

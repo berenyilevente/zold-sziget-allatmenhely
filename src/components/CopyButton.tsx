@@ -34,7 +34,7 @@ export function CopyButton({ value, label, className }: CopyButtonProps) {
       type="button"
       onClick={handleClick}
       aria-label={label ?? "Érték másolása"}
-      className={`inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-semibold transition-colors hover:bg-brand/10 focus-visible:outline-2 focus-visible:outline-brand ${
+      className={`inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-semibold transition-colors hover:bg-brand/10 focus-visible:outline-2 focus-visible:outline-brand ${
         copied ? "text-brand" : "text-brand-dark"
       } ${className ?? ""}`}
     >

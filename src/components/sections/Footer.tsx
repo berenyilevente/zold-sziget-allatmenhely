@@ -7,14 +7,14 @@ export function Footer() {
       <Container>
         <div className="grid gap-10 sm:grid-cols-3">
           <div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-3">
               <Image
                 src="/zold_sziget_logo.png"
                 alt="Zöld Sziget Állatmenhely logó"
                 width={220}
                 height={64}
                 unoptimized
-                className="h-14 w-auto"
+                className="h-10 w-auto sm:h-14"
               />
               <p className="font-bold text-white">Zöld Sziget Állatmenhely</p>
             </div>
