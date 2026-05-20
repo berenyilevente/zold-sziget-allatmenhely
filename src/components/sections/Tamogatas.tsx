@@ -1,8 +1,12 @@
-import { Container } from "../Container";
+import { CopyButton } from '../CopyButton';
+import { Container } from '../Container';
 
 export function Tamogatas() {
   return (
-    <section id="tamogatas" className="scroll-mt-20 bg-cream-soft py-20 sm:scroll-mt-24 sm:py-28">
+    <section
+      id="tamogatas"
+      className="scroll-mt-20 bg-cream-soft py-20 sm:scroll-mt-24 sm:py-28"
+    >
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-sm font-semibold tracking-wider text-brand-dark uppercase">
@@ -12,13 +16,13 @@ export function Tamogatas() {
             Így tudsz segíteni nekünk
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-            A menhely működése szinte teljes egészében adományokból valósul meg.
-            Minden forint, takaró és önkéntes óra számít — köszönjük, hogy
-            mellénk állsz.
+            A menhely működése szinte teljes egészében adományokból valósul meg
+            — minden forint, takaró és önkéntes óra közvetlenül az állatainkhoz
+            jut. Bármilyen formában segítesz, hálásak vagyunk érte.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
           <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-2xl">
               <span aria-hidden="true">📄</span>
@@ -34,9 +38,12 @@ export function Tamogatas() {
               <p className="text-xs font-semibold tracking-wide text-ink-soft uppercase">
                 Adószám
               </p>
-              <p className="mt-1 font-mono text-xl font-semibold text-ink select-all">
-                18145869-1-13
-              </p>
+              <div className="mt-1 flex items-center justify-between gap-3">
+                <span className="font-mono text-xl font-semibold break-all text-ink select-all">
+                  18145869-1-13
+                </span>
+                <CopyButton value="18145869-1-13" label="Adószám másolása" />
+              </div>
             </div>
           </div>
 
@@ -55,9 +62,15 @@ export function Tamogatas() {
               <p className="text-xs font-semibold tracking-wide text-ink-soft uppercase">
                 Bankszámlaszám · B3 TAKARÉK Szövetkezet
               </p>
-              <p className="mt-1 font-mono text-xl font-semibold text-ink select-all">
-                64800097-19909206
-              </p>
+              <div className="mt-1 flex items-center justify-between gap-3">
+                <span className="font-mono text-xl font-semibold break-all text-ink select-all">
+                  64800097-19909206
+                </span>
+                <CopyButton
+                  value="64800097-19909206"
+                  label="Bankszámlaszám másolása"
+                />
+              </div>
             </div>
           </div>
 
@@ -97,9 +110,7 @@ export function Tamogatas() {
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-2xl">
               <span aria-hidden="true">🤲</span>
             </div>
-            <h3 className="mt-5 text-xl font-semibold text-ink">
-              Önkéntesség
-            </h3>
+            <h3 className="mt-5 text-xl font-semibold text-ink">Önkéntesség</h3>
             <p className="mt-3 text-base leading-relaxed text-ink-soft">
               Gyere ki kutyát sétáltatni, segíteni a takarításban, vagy oszd meg
               a posztjainkat a közösségi médiában. Minden óra, minden megosztás
@@ -115,6 +126,20 @@ export function Tamogatas() {
               <span aria-hidden="true">→</span>
             </a>
           </div>
+        </div>
+
+        <div className="mx-auto mt-16 max-w-2xl text-center">
+          <span aria-hidden="true" className="text-2xl">
+            🐾
+          </span>
+          <p className="mt-3 text-base leading-relaxed text-ink-soft italic">
+            Köszönjük, hogy itt vagy! Akár 500 forintot küldesz, akár egy zsák
+            tápot hozol ki hozzánk, akár csak megosztod ezt az oldalt — minden
+            gesztus számít!
+          </p>
+          <p className="mt-3 text-sm font-semibold text-ink">
+            — A Zöldsziget Állatvédő Baráti Kör csapata
+          </p>
         </div>
       </Container>
     </section>
