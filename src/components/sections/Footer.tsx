@@ -14,7 +14,7 @@ export function Footer() {
                 width={220}
                 height={64}
                 unoptimized
-                className="h-24 w-auto"
+                className="h-14 w-auto"
               />
               <p className="font-bold text-white">Zöld Sziget Állatmenhely</p>
             </div>
