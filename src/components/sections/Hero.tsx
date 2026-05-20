@@ -53,7 +53,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto aspect-square w-full max-w-xs sm:max-w-sm lg:max-w-md">
+          <div className="relative sm:block hidden mx-auto aspect-square w-full max-w-xs sm:max-w-sm lg:max-w-md ">
             <div className="absolute inset-0 rounded-[2.5rem] bg-linear-to-br from-brand-light via-brand to-brand-dark shadow-xl" />
             <div className="absolute inset-4 rounded-4xl bg-cream/30 ring-1 ring-white/30 backdrop-blur-sm" />
             <PawPrint className="absolute top-6 left-6 h-10 w-10 -rotate-12 text-white/30 sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
