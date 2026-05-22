@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 type CopyButtonProps = {
   value: string;
@@ -33,17 +33,17 @@ export function CopyButton({ value, label, className }: CopyButtonProps) {
     <button
       type="button"
       onClick={handleClick}
-      aria-label={label ?? "Érték másolása"}
+      aria-label={label ?? 'Érték másolása'}
       className={`inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-semibold transition-colors hover:bg-brand/10 focus-visible:outline-2 focus-visible:outline-brand ${
-        copied ? "text-brand" : "text-brand-dark"
-      } ${className ?? ""}`}
+        copied ? 'text-brand' : 'text-brand-dark'
+      } ${className ?? ''}`}
     >
       {copied ? (
         <svg
           aria-hidden="true"
           viewBox="0 0 20 20"
           fill="none"
-          className="h-4 w-4"
+          className="h-6 w-6"
         >
           <path
             d="M5 10.5l3 3 7-7"
@@ -78,7 +78,7 @@ export function CopyButton({ value, label, className }: CopyButtonProps) {
         </svg>
       )}
       <span aria-live="polite" className="hidden sm:inline">
-        {copied ? "Másolva" : "Másol"}
+        {copied ? 'Másolva' : 'Másol'}
       </span>
     </button>
   );

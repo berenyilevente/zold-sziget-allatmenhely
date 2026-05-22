@@ -39,7 +39,7 @@ export function Tamogatas() {
                 Adószám
               </p>
               <div className="mt-1 flex items-center justify-between gap-3">
-                <span className="font-mono text-xl font-semibold break-all text-ink select-all">
+                <span className="font-mono text-xl font-semibold break-all text-ink select-all whitespace-nowrap">
                   18145869-1-13
                 </span>
                 <CopyButton value="18145869-1-13" label="Adószám másolása" />
@@ -63,7 +63,7 @@ export function Tamogatas() {
                 Bankszámlaszám · B3 TAKARÉK Szövetkezet
               </p>
               <div className="mt-1 flex items-center justify-between gap-3">
-                <span className="font-mono text-xl font-semibold break-all text-ink select-all">
+                <span className="font-mono text-xl font-semibold break-all text-ink select-all whitespace-nowrap">
                   64800097-19909206
                 </span>
                 <CopyButton

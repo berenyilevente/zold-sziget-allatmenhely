@@ -38,12 +38,12 @@ export function Contact() {
               <div className="flex items-start gap-4">
                 <span
                   aria-hidden="true"
-                  className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg"
+                  className="mt-0.5 hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg"
                 >
                   📍
                 </span>
-                <div>
-                  <dt className="text-sm font-semibold tracking-wide text-ink-soft uppercase">
+                <div className="min-w-0 flex-1">
+                  <dt className="text-sm font-bold tracking-wide text-ink-soft uppercase">
                     Cím
                   </dt>
                   <dd className="mt-1 text-base text-ink">
@@ -59,12 +59,12 @@ export function Contact() {
               <div className="flex items-start gap-4">
                 <span
                   aria-hidden="true"
-                  className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg"
+                  className="mt-0.5 hidden h-10 w-10 sm:flex shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg"
                 >
                   📞
                 </span>
-                <div>
-                  <dt className="text-sm font-semibold tracking-wide text-ink-soft uppercase">
+                <div className="min-w-0 flex-1">
+                  <dt className="text-sm font-bold tracking-wide text-ink-soft uppercase">
                     Telefon
                   </dt>
                   <dd className="mt-1 text-base text-ink">
@@ -81,15 +81,15 @@ export function Contact() {
               <div className="flex items-start gap-4">
                 <span
                   aria-hidden="true"
-                  className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg"
+                  className="mt-0.5 hidden h-10 w-10 sm:flex shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg"
                 >
                   ✉️
                 </span>
-                <div>
-                  <dt className="text-sm font-semibold tracking-wide text-ink-soft uppercase">
+                <div className="min-w-0 flex-1">
+                  <dt className="text-sm font-bold tracking-wide text-ink-soft uppercase">
                     E-mail
                   </dt>
-                  <dd className="mt-1 text-base text-ink">
+                  <dd className="mt-1 text-base wrap-break-word text-ink">
                     <a
                       href="mailto:zoldszigetinfo@gmail.com"
                       className="hover:text-brand-dark hover:underline"
@@ -103,15 +103,15 @@ export function Contact() {
               <div className="flex items-start gap-4">
                 <span
                   aria-hidden="true"
-                  className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg"
+                  className="mt-0.5 hidden h-10 w-10 sm:flex shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg"
                 >
                   💬
                 </span>
-                <div>
-                  <dt className="text-sm font-semibold tracking-wide text-ink-soft uppercase">
+                <div className="min-w-0 flex-1">
+                  <dt className="text-sm font-bold tracking-wide text-ink-soft uppercase">
                     Facebook
                   </dt>
-                  <dd className="mt-1 text-base text-ink">
+                  <dd className="mt-1 text-base wrap-break-word text-ink">
                     <a
                       href="https://www.facebook.com/zoldszigetallatmenhely"
                       target="_blank"
@@ -127,12 +127,12 @@ export function Contact() {
               <div className="flex items-start gap-4">
                 <span
                   aria-hidden="true"
-                  className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg"
+                  className="mt-0.5 hidden h-10 w-10 sm:flex shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg"
                 >
                   🕒
                 </span>
-                <div>
-                  <dt className="text-sm font-semibold tracking-wide text-ink-soft uppercase">
+                <div className="min-w-0 flex-1">
+                  <dt className="text-sm font-bold tracking-wide text-ink-soft uppercase">
                     Nyitvatartás
                   </dt>
                   <dd className="mt-1 text-base text-ink">
@@ -165,7 +165,7 @@ export function Contact() {
               <iframe
                 title="Zöld Sziget Állatmenhely térképe"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=18.9080%2C47.4220%2C18.9380%2C47.4400&layer=mapnik&marker=47.4310%2C18.9230"
-                className="h-full w-full border-0"
+                className="block h-full w-full max-w-full border-0"
                 loading="lazy"
               />
             </div>
