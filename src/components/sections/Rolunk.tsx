@@ -68,20 +68,10 @@ export function Rolunk() {
                 érezze, hogy valakihez tartozik.
               </p>
               <p>
-                A Zöld Sziget Állatmenhely több éves menhelyi tapasztalattal
-                működik Törökbálinton.
-              </p>
-              <p>
-                A menhelyen átlagosan kb. 70–120 kutya tengeti napjait, a
-                legkisebbektől a legnagyobbakig.
-              </p>
-              <p>
-                Menhelyünkön leginkább keverék kutyusok találhatóak, de nem
-                ritka a fajtatiszta kutya sem. A Zöld Szigeten talált és saját
-                gazda által leadott kutyus egyaránt megtalálható és a mi célunk
-                az, hogy minél kevesebb időt töltsenek a menhelyen és egy olyan
-                szerető gazdira találjanak, aki szeretni fogja őt és gondoskodik
-                róla, amíg csak él.
+                A Zöld Sziget Állatmenhely célja, hogy a környékbeli elhagyott,
+                bántalmazott vagy veszélyben lévő állatoknak segítsünk, és olyan
+                szerető otthont találjunk számukra, ahol biztonságban és
+                boldogan élhetnek. Mert a Zöld Szigeten minden Mancs számít!
               </p>
             </div>
           </div>

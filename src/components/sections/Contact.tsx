@@ -1,12 +1,12 @@
 import { Container } from '../Container';
 
 const openingHours: ReadonlyArray<readonly [string, string]> = [
-  ['Hétfő', '12:00–16:00'],
-  ['Kedd', '12:00–16:00'],
-  ['Szerda', '12:00–16:00'],
-  ['Csütörtök', '12:00–16:00'],
-  ['Péntek', '12:00–16:00'],
-  ['Szombat', '12:00–16:00'],
+  ['Hétfő', '10:00-14:00'],
+  ['Kedd', '10:00-14:00'],
+  ['Szerda', '10:00-14:00'],
+  ['Csütörtök', '10:00-14:00'],
+  ['Péntek', '10:00-14:00'],
+  ['Szombat', '10:00-14:00'],
   ['Vasárnap', 'Zárva'],
 ];
 
