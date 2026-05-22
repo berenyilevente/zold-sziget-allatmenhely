@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Container } from './Container';
 
 type NavLink = { href: string; label: string };
@@ -16,13 +16,28 @@ const links: NavLink[] = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [open]);
+
   return (
-    <nav
-      aria-label="Fő menü"
-      className="sticky top-0 z-50 border-b border-black/5 bg-cream/90 backdrop-blur supports-backdrop-filter:bg-cream/75"
-    >
-      <Container>
-        <div className="flex h-16 items-center justify-between gap-4 sm:h-20">
+    <>
+      <nav
+        aria-label="Fő menü"
+        className="sticky top-0 z-30 border-b border-black/5 bg-cream/90 backdrop-blur supports-backdrop-filter:bg-cream/75"
+      >
+        <Container>
+          <div className="flex h-16 items-center justify-between gap-4 sm:h-20">
           <a
             href="#top"
             aria-label="Zöld Sziget Állatmenhely — főoldal"
@@ -94,33 +109,74 @@ export function Navbar() {
           </button>
         </div>
 
-        {open && (
-          <div id="mobile-menu" className="pb-4 md:hidden">
-            <ul className="flex flex-col gap-1 border-t border-black/5 pt-3">
-              {links.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-lg px-3 py-3 text-base font-medium text-ink transition-colors hover:bg-black/5"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-              <li className="pt-2">
-                <a
-                  href="#tamogatas"
-                  onClick={() => setOpen(false)}
-                  className="inline-flex h-11 w-full items-center justify-center rounded-full bg-accent px-5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-accent-dark"
-                >
-                  Adományozás
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
-      </Container>
-    </nav>
+        </Container>
+      </nav>
+
+      <div
+        onClick={() => setOpen(false)}
+        aria-hidden="true"
+        className={`fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 md:hidden ${
+          open ? 'opacity-100' : 'pointer-events-none opacity-0'
+        }`}
+      />
+
+      <aside
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Fő menü"
+        aria-hidden={!open}
+        className={`fixed inset-y-0 right-0 z-50 flex w-full flex-col bg-cream-soft shadow-xl transition-transform duration-300 ease-out md:hidden ${
+          open ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex h-16 items-center justify-between border-b border-black/5 px-4 sm:h-20">
+          <span className="font-bold text-ink">Menü</span>
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            aria-label="Menü bezárása"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-ink transition-colors hover:bg-black/5 focus-visible:ring-2 focus-visible:ring-brand focus-visible:outline-none"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              aria-hidden="true"
+              className="h-6 w-6"
+            >
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <ul className="flex flex-col gap-1 p-4">
+          {links.map((l) => (
+            <li key={l.href}>
+              <a
+                href={l.href}
+                onClick={() => setOpen(false)}
+                tabIndex={open ? 0 : -1}
+                className="block rounded-lg px-3 py-3 text-base font-medium text-ink transition-colors hover:bg-black/5"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+          <li className="pt-2">
+            <a
+              href="#tamogatas"
+              onClick={() => setOpen(false)}
+              tabIndex={open ? 0 : -1}
+              className="inline-flex h-11 w-full items-center justify-center rounded-full bg-accent px-5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-accent-dark"
+            >
+              Adományozás
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </>
   );
 }
